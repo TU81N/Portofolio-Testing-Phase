@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    background-image: url("../space.gif");
+    background-size: 100% 100vh;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    font-size: 25px;
+}
+
+.side-menu-container {
+    top: 0;
+    position: absolute;
+    height: 100%;
+}
+
+.side-menu-container {
+    top: 0;
+    position: absolute;
+    height: 100%;
+}
+
+.side-menu-items {
+    height: 100%;
+    width: 9%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #009494;
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    background-image: #010102;
+}
+
+.side-menu-item a {
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.side-menu-logo {
+    position: absolute;
+    z-index: 2;
+}
+
+.side-menu-item a:hover {
+    background-color: #429FDD;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    bottom: 130px;
+    left: 15px;
+}
+
+.btn {
+    margin-left: 8px;
+    background-color: #00050800;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row {
+    position: relative;
+    left: 192px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.center {
+    color: white;
+    font-family: 'Courgette';
+}
+
+.map-position {
+    position: fixed;
+    left: 50%;
+    margin-left: 60%;
+    min-width: 100%;
+    min-height: 50%;
+    width: auto;
+    height: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.words0 {
+    color: white;
+    font-family: 'Courgette';
+    animation: fade-in 5s;
+}
+
+.words1 {
+    color: white;
+    font-family: 'Courgette';
+    animation: fade-in 9s;
+}
+
+.words2 {
+    color: white;
+    font-family: 'Courgette';
+    animation: fade-in 12s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.chart {
+    background: rgba(255, 0, 0, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 600px;
+    position: relative;
+}
+
+.chart span {
+    /* You can modify the value below to change the distance between the percentage number and the bar */
+    margin-left: 5px;
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+}
+
+.bar {
+    /* You can modify the total time used for the animation here */
+    animation: load 6s normal forwards;
+    /* 
+        Add a little spice by having a shadow below the bar.
+        Feel free to comment out this line below to have an even LITE version :D 
+        */
+    box-shadow: 0 10px 40px -10px rgb(255, 0, 0);
+
+    border-radius: 100px;
+    background: rgb(235, 10, 10);
+    height: 30px;
+    width: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        /* You need to change the percentage below to match the value in the corresponding <span> */
+        width: 100%;
+    }
+}
